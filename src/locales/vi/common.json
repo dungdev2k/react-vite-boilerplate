@@ -1,0 +1,31 @@
+{
+  "appName": "React Boilerplate",
+  "actions": {
+    "save": "Lưu",
+    "cancel": "Huỷ",
+    "delete": "Xoá",
+    "edit": "Sửa",
+    "create": "Tạo mới",
+    "back": "Quay lại",
+    "search": "Tìm kiếm"
+  },
+  "nav": {
+    "dashboard": "Trang chủ",
+    "users": "Người dùng",
+    "settings": "Cài đặt",
+    "logout": "Đăng xuất"
+  },
+  "theme": {
+    "light": "Sáng",
+    "dark": "Tối"
+  },
+  "language": {
+    "en": "English",
+    "vi": "Tiếng Việt"
+  },
+  "status": {
+    "loading": "Đang tải...",
+    "error": "Đã xảy ra lỗi",
+    "empty": "Không có dữ liệu"
+  }
+}

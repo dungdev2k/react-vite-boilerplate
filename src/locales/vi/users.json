@@ -1,0 +1,19 @@
+{
+  "title": "Người dùng",
+  "createTitle": "Tạo người dùng",
+  "editTitle": "Cập nhật người dùng",
+  "columns": {
+    "id": "ID",
+    "name": "Tên",
+    "email": "Email",
+    "phone": "Điện thoại",
+    "company": "Công ty",
+    "actions": "Hành động"
+  },
+  "form": {
+    "name": "Họ tên",
+    "email": "Email",
+    "phone": "Số điện thoại",
+    "company": "Công ty"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Users",
+  "createTitle": "Create user",
+  "editTitle": "Edit user",
+  "columns": {
+    "id": "ID",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "company": "Company",
+    "actions": "Actions"
+  },
+  "form": {
+    "name": "Full name",
+    "email": "Email",
+    "phone": "Phone",
+    "company": "Company"
+  }
+}

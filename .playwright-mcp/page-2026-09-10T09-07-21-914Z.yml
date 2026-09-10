@@ -1,0 +1,144 @@
+- generic [ref=f2e1]:
+  - generic [ref=f2e3]:
+    - generic [ref=f2e4]:
+      - complementary [ref=f2e5]:
+        - generic [ref=f2e6]:
+          - generic [ref=f2e7]: React Boilerplate
+          - menu [ref=f2e9]:
+            - menuitem [ref=f2e10] [cursor=pointer]:
+              - img "dashboard" [ref=f2e11]
+              - link "Dashboard" [ref=f2e15]:
+                - /url: /
+            - menuitem [ref=f2e16] [cursor=pointer]:
+              - img "team" [ref=f2e17]
+              - link "Users" [ref=f2e21]:
+                - /url: /users
+            - menuitem [ref=f2e22] [cursor=pointer]:
+              - img "setting" [ref=f2e23]
+              - link "Settings" [ref=f2e27]:
+                - /url: /settings
+        - img "left" [ref=f2e29] [cursor=pointer]
+      - generic [ref=f2e32]:
+        - banner [ref=f2e33]:
+          - generic [ref=f2e34]:
+            - button "Language" [active] [ref=f2e36] [cursor=pointer]:
+              - img "global" [ref=f2e38]
+            - button "Toggle theme" [ref=f2e42] [cursor=pointer]:
+              - img "sun" [ref=f2e349]
+            - button "user will" [ref=f2e48] [cursor=pointer]:
+              - img "user" [ref=f2e50]
+              - generic [ref=f2e53]: will
+        - main [ref=f2e54]:
+          - generic [ref=f2e55]:
+            - generic [ref=f2e57]:
+              - heading "Users" [level=4] [ref=f2e59]
+              - button "plus Create" [ref=f2e61] [cursor=pointer]:
+                - img "plus" [ref=f2e63]
+                - generic [ref=f2e67]: Create
+            - generic [ref=f2e177]:
+              - table [ref=f2e181]:
+                - rowgroup [ref=f2e184]:
+                  - row [ref=f2e185]:
+                    - columnheader "ID" [ref=f2e186]
+                    - columnheader "Name" [ref=f2e187]
+                    - columnheader "Email" [ref=f2e188]
+                    - columnheader "Phone" [ref=f2e189]
+                    - columnheader "Company" [ref=f2e190]
+                - rowgroup [ref=f2e191]:
+                  - row [ref=f2e192]:
+                    - cell "1" [ref=f2e193]
+                    - cell [ref=f2e194]:
+                      - link "Leanne Graham" [ref=f2e195] [cursor=pointer]:
+                        - /url: /users/1
+                    - cell "Sincere@april.biz" [ref=f2e196]
+                    - cell "1-770-736-8031 x56442" [ref=f2e197]
+                    - cell "Romaguera-Crona" [ref=f2e198]
+                  - row [ref=f2e199]:
+                    - cell "2" [ref=f2e200]
+                    - cell [ref=f2e201]:
+                      - link "Ervin Howell" [ref=f2e202] [cursor=pointer]:
+                        - /url: /users/2
+                    - cell "Shanna@melissa.tv" [ref=f2e203]
+                    - cell "010-692-6593 x09125" [ref=f2e204]
+                    - cell "Deckow-Crist" [ref=f2e205]
+                  - row [ref=f2e206]:
+                    - cell "3" [ref=f2e207]
+                    - cell [ref=f2e208]:
+                      - link "Clementine Bauch" [ref=f2e209] [cursor=pointer]:
+                        - /url: /users/3
+                    - cell "Nathan@yesenia.net" [ref=f2e210]
+                    - cell "1-463-123-4447" [ref=f2e211]
+                    - cell "Romaguera-Jacobson" [ref=f2e212]
+                  - row [ref=f2e213]:
+                    - cell "4" [ref=f2e214]
+                    - cell [ref=f2e215]:
+                      - link "Patricia Lebsack" [ref=f2e216] [cursor=pointer]:
+                        - /url: /users/4
+                    - cell "Julianne.OConner@kory.org" [ref=f2e217]
+                    - cell "493-170-9623 x156" [ref=f2e218]
+                    - cell "Robel-Corkery" [ref=f2e219]
+                  - row [ref=f2e220]:
+                    - cell "5" [ref=f2e221]
+                    - cell [ref=f2e222]:
+                      - link "Chelsey Dietrich" [ref=f2e223] [cursor=pointer]:
+                        - /url: /users/5
+                    - cell "Lucio_Hettinger@annie.ca" [ref=f2e224]
+                    - cell "(254)954-1289" [ref=f2e225]
+                    - cell "Keebler LLC" [ref=f2e226]
+                  - row [ref=f2e227]:
+                    - cell "6" [ref=f2e228]
+                    - cell [ref=f2e229]:
+                      - link "Mrs. Dennis Schulist" [ref=f2e230] [cursor=pointer]:
+                        - /url: /users/6
+                    - cell "Karley_Dach@jasper.info" [ref=f2e231]
+                    - cell "1-477-935-8478 x6430" [ref=f2e232]
+                    - cell "Considine-Lockman" [ref=f2e233]
+                  - row [ref=f2e234]:
+                    - cell "7" [ref=f2e235]
+                    - cell [ref=f2e236]:
+                      - link "Kurtis Weissnat" [ref=f2e237] [cursor=pointer]:
+                        - /url: /users/7
+                    - cell "Telly.Hoeger@billy.biz" [ref=f2e238]
+                    - cell "210.067.6132" [ref=f2e239]
+                    - cell "Johns Group" [ref=f2e240]
+                  - row [ref=f2e241]:
+                    - cell "8" [ref=f2e242]
+                    - cell [ref=f2e243]:
+                      - link "Nicholas Runolfsdottir V" [ref=f2e244] [cursor=pointer]:
+                        - /url: /users/8
+                    - cell "Sherwood@rosamond.me" [ref=f2e245]
+                    - cell "586.493.6943 x140" [ref=f2e246]
+                    - cell "Abernathy Group" [ref=f2e247]
+                  - row [ref=f2e248]:
+                    - cell "9" [ref=f2e249]
+                    - cell [ref=f2e250]:
+                      - link "Glenna Reichert" [ref=f2e251] [cursor=pointer]:
+                        - /url: /users/9
+                    - cell "Chaim_McDermott@dana.io" [ref=f2e252]
+                    - cell "(775)976-6794 x41206" [ref=f2e253]
+                    - cell "Yost and Sons" [ref=f2e254]
+                  - row [ref=f2e255]:
+                    - cell "10" [ref=f2e256]
+                    - cell [ref=f2e257]:
+                      - link "Clementina DuBuque" [ref=f2e258] [cursor=pointer]:
+                        - /url: /users/10
+                    - cell "Rey.Padberg@karina.biz" [ref=f2e259]
+                    - cell "024-648-3804" [ref=f2e260]
+                    - cell "Hoeger LLC" [ref=f2e261]
+              - list [ref=f2e262]:
+                - listitem "Previous Page" [ref=f2e263]:
+                  - button [disabled] [ref=f2e264]:
+                    - img "left" [ref=f2e265]
+                - listitem "1" [ref=f2e268] [cursor=pointer]
+                - listitem "Next Page" [ref=f2e270]:
+                  - button [disabled] [ref=f2e271]:
+                    - img "right" [ref=f2e272]
+    - generic:
+      - contentinfo:
+        - button "Open TanStack Router Devtools" [ref=f2e275] [cursor=pointer]:
+          - generic [ref=f2e347]: "-"
+          - generic [ref=f2e348]: TanStack Router
+    - button "Open Tanstack query devtools" [ref=f2e128] [cursor=pointer]
+  - menu [ref=f2e355]:
+    - menuitem "English" [ref=f2e356] [cursor=pointer]
+    - menuitem "Tiếng Việt" [ref=f2e358] [cursor=pointer]
