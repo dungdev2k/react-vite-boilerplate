@@ -111,7 +111,7 @@ features/<name>/
 Three groups, separated by a blank line, alphabetised within each group:
 
 ```ts
-// 1. External (npm packages)
+// 1. External packages (from the registry)
 import { useMutation } from '@tanstack/react-query'
 import { Button, Form } from 'antd'
 import { useForm } from 'react-hook-form'
@@ -200,7 +200,7 @@ React Compiler is enabled — it auto-memoises components, values, and callbacks
 
 ### 8.1 File-based, don't edit `routeTree.gen.ts`
 - Add/remove routes by adding/removing files under `src/routes/`. The plugin regenerates the tree.
-- If the editor complains about a route path, run `npm run dev` or `npm run build` to regenerate.
+- If the editor complains about a route path, run `pnpm dev` or `pnpm build` to regenerate.
 
 ### 8.2 Layout routes
 - Prefix with `_` (hidden from URL).
@@ -436,7 +436,7 @@ Every user-facing string (label, placeholder, message) goes through `t()`. Excep
 ## 17. ESLint & format
 
 - ESLint config at `eslint.config.js` (flat config).
-- Run `npm run lint` before committing. Use `npm run lint:fix` to auto-fix.
+- Run `pnpm lint` before committing. Use `pnpm lint:fix` to auto-fix.
 - **Do not use `eslint-disable`** unless truly necessary. If you do, add a WHY comment on the line above.
 
 ```ts
@@ -519,10 +519,10 @@ export const Loading: Story = { args: { loading: true } }
 
 ## 20. Pre-PR checklist
 
-- [ ] `npm run typecheck` passes
-- [ ] `npm run lint` passes (no new warnings)
-- [ ] `npm run build` passes
-- [ ] `npm run build-storybook` passes
+- [ ] `pnpm typecheck` passes
+- [ ] `pnpm lint` passes (no new warnings)
+- [ ] `pnpm build` passes
+- [ ] `pnpm build-storybook` passes
 - [ ] New components ship with a co-located `.stories.tsx`
 - [ ] No stray `console.log`
 - [ ] No unexplained `TODO`

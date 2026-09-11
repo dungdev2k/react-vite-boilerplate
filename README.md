@@ -22,7 +22,7 @@ Enterprise-grade boilerplate for React + TypeScript applications. **Feature-base
 ## Prerequisites
 
 - **Node.js** >= 22.13 or >= 24 (required by ESLint 10). Node 23 works but emits engine warnings.
-- **npm** >= 10 (or the pnpm/yarn equivalent).
+- **pnpm** >= 9 — this project uses **pnpm** as its package manager (locked via `packageManager` in `package.json`). Enable it once with `corepack enable`.
 
 ## Use as boilerplate (recommended)
 
@@ -34,7 +34,7 @@ git clone <this-repo-url> my-new-app
 cd my-new-app
 
 # 2. Interactive setup — renames the project, creates .env, resets git, installs
-npm run setup -- --reset-git
+pnpm setup -- --reset-git
 
 # You'll be prompted for the project name (kebab-case).
 # The script rewrites: package.json, index.html <title>, README heading,
@@ -44,7 +44,7 @@ npm run setup -- --reset-git
 Non-interactive:
 
 ```bash
-npm run setup -- \
+pnpm setup -- \
   --name my-new-app \
   --display "My New App" \
   --reset-git \
@@ -54,7 +54,7 @@ npm run setup -- \
 Rename only (no install, no git reset):
 
 ```bash
-npm run rename -- --name another-name
+pnpm rename -- --name another-name
 ```
 
 Flags:
@@ -64,7 +64,7 @@ Flags:
 | `--name <kebab>`      | Package name (also used to derive the display name)         |
 | `--display "<Title>"` | Overrides the derived display name                          |
 | `--reset-git`         | Wipe `.git/` and create a fresh `chore: initialize <name>` commit |
-| `--no-install`        | Skip `npm install`                                          |
+| `--no-install`        | Skip `pnpm install`                                         |
 | `--dry-run`           | Print what would change, don't touch files                  |
 | `--yes`               | Skip the confirmation prompt                                |
 | `--help`              | Show help                                                   |
@@ -75,26 +75,26 @@ If you prefer to do it yourself:
 
 ```bash
 cd react-vite-boilerplate
-npm install
+pnpm install
 cp .env.example .env
 # Point VITE_API_URL at your real backend
 ```
 
 ## Scripts
 
-| Command                    | Description                                                    |
-| -------------------------- | -------------------------------------------------------------- |
-| `npm run setup`            | Interactive boilerplate setup (rename + env + install)         |
-| `npm run rename`           | Rename the project only (no install, no git reset)             |
-| `npm run dev`              | Start dev server at `http://localhost:5173` with HMR           |
-| `npm run build`            | Type-check + production build (output to `dist/`)              |
-| `npm run preview`          | Preview the production build at `http://localhost:4173`        |
-| `npm run typecheck`        | Run `tsc -b` for type checking only                            |
-| `npm run lint`             | Run ESLint on the whole codebase                               |
-| `npm run lint:fix`         | Run ESLint and auto-fix what it can                            |
-| `npm run storybook`        | Start Storybook dev server at `http://localhost:6006`          |
-| `npm run build-storybook`  | Build a static Storybook to `storybook-static/`                |
-| `npm run clean`            | Remove `dist/`, `storybook-static/`, Vite cache, generated route tree |
+| Command                     | Description                                                    |
+| --------------------------- | -------------------------------------------------------------- |
+| `pnpm setup`                | Interactive boilerplate setup (rename + env + install)         |
+| `pnpm rename`               | Rename the project only (no install, no git reset)             |
+| `pnpm dev`                  | Start dev server at `http://localhost:5173` with HMR           |
+| `pnpm build`                | Type-check + production build (output to `dist/`)              |
+| `pnpm preview`              | Preview the production build at `http://localhost:4173`        |
+| `pnpm typecheck`            | Run `tsc -b` for type checking only                            |
+| `pnpm lint`                 | Run ESLint on the whole codebase                               |
+| `pnpm lint:fix`             | Run ESLint and auto-fix what it can                            |
+| `pnpm storybook`            | Start Storybook dev server at `http://localhost:6006`          |
+| `pnpm build-storybook`      | Build a static Storybook to `storybook-static/`                |
+| `pnpm clean`                | Remove `dist/`, `storybook-static/`, Vite cache, generated route tree |
 
 ## Environment variables
 
@@ -336,12 +336,12 @@ Enabled in `vite.config.ts` via `react({ compiler: true })`. It automatically me
 
 - Runtime: `babel-plugin-react-compiler` (invoked through `oxc-transform-react`).
 - Lint: `eslint-plugin-react-hooks@^7` bundles the `react-hooks/react-compiler` rule and enforces the Rules of React.
-- Applies to both `npm run build` and Storybook (same Vite config).
+- Applies to both `pnpm build` and Storybook (same Vite config).
 - Prefer plain code over manual memoisation — the compiler handles the common cases. Only fall back to `useMemo`/`useCallback` when profiling shows you need to.
 
 ## Storybook
 
-Run `npm run storybook` and open `http://localhost:6006`.
+Run `pnpm storybook` and open `http://localhost:6006`.
 
 - Config lives in `.storybook/main.ts` (framework, addons, stories glob).
 - Global decorators in `.storybook/preview.tsx`:

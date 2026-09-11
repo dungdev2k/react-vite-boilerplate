@@ -3,16 +3,16 @@
  * Boilerplate setup script.
  *
  * Interactive mode:
- *   npm run setup
+ *   pnpm run setup
  *
  * Non-interactive mode:
- *   npm run setup -- --name my-new-app --display "My New App" --reset-git --no-install
+ *   pnpm run setup -- --name my-new-app --display "My New App" --reset-git --no-install
  *
  * Flags:
  *   --name <kebab-case>       Package name (also used to derive display name)
  *   --display "<Title Case>"  Overrides the derived display name
  *   --reset-git               Wipe .git and create a fresh initial commit
- *   --no-install              Skip `npm install`
+ *   --no-install              Skip `pnpm install`
  *   --dry-run                 Print what would change, do not write files
  *   --help                    Show this help
  */
@@ -162,15 +162,15 @@ async function main() {
   }
 
   if (!flags['no-install']) {
-    run('npm install')
+    run('pnpm install')
   }
 
   console.log('\n✅ Setup complete.\n')
   console.log('Next steps:')
-  console.log('  npm run dev             # start dev server')
-  console.log('  npm run storybook       # start Storybook')
-  console.log('  npm run typecheck       # type check')
-  console.log('  npm run build           # production build')
+  console.log('  pnpm dev             # start dev server')
+  console.log('  pnpm storybook       # start Storybook')
+  console.log('  pnpm typecheck       # type check')
+  console.log('  pnpm build           # production build')
 }
 
 main().catch((err) => {
