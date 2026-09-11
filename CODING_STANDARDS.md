@@ -389,6 +389,12 @@ Every user-facing string (label, placeholder, message) goes through `t()`. Excep
 - **AntD** — structured components (Button, Form, Table, Modal, Select, DatePicker, message, notification).
 - **Tailwind** — layout, spacing, responsive, utility. Only use it for the layout around AntD; don't rebuild UI that AntD already ships.
 
+### 14.1.1 Design tokens (single source of truth)
+`src/shared/lib/designTokens.ts` is the ONLY place to define colors / radius / font / spacing / breakpoints / control height. Both Tailwind (`tailwind.config.ts`) and AntD (`src/shared/lib/theme.ts`) import from it.
+
+- **Never hardcode** hex colors, radii, or font sizes in components — reference the token indirectly via a Tailwind utility (`bg-primary`, `rounded-md`) or the AntD theme.
+- Adding a new token → put it in `designTokens.ts` first, then wire into both configs.
+
 ### 14.2 Don't
 - Don't create per-component CSS files. Exception: global tokens in `src/index.css`.
 - Don't use inline `style={{...}}` unless the value is dynamic (e.g. `style={{ width: percent + '%' }}`).

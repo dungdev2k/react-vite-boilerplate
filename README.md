@@ -24,24 +24,68 @@ Enterprise-grade boilerplate for React + TypeScript applications. **Feature-base
 - **Node.js** >= 22.13 or >= 24 (required by ESLint 10). Node 23 works but emits engine warnings.
 - **npm** >= 10 (or the pnpm/yarn equivalent).
 
-## Setup
+## Use as boilerplate (recommended)
+
+Bootstrap a fresh project from this template in one command:
 
 ```bash
-# 1. Clone / enter the project directory
+# 1. Clone the boilerplate under a new directory name
+git clone <this-repo-url> my-new-app
+cd my-new-app
+
+# 2. Interactive setup — renames the project, creates .env, resets git, installs
+npm run setup -- --reset-git
+
+# You'll be prompted for the project name (kebab-case).
+# The script rewrites: package.json, index.html <title>, README heading,
+# .env / .env.example VITE_APP_NAME, and locales' appName.
+```
+
+Non-interactive:
+
+```bash
+npm run setup -- \
+  --name my-new-app \
+  --display "My New App" \
+  --reset-git \
+  --yes
+```
+
+Rename only (no install, no git reset):
+
+```bash
+npm run rename -- --name another-name
+```
+
+Flags:
+
+| Flag                  | Effect                                                     |
+| --------------------- | ---------------------------------------------------------- |
+| `--name <kebab>`      | Package name (also used to derive the display name)         |
+| `--display "<Title>"` | Overrides the derived display name                          |
+| `--reset-git`         | Wipe `.git/` and create a fresh `chore: initialize <name>` commit |
+| `--no-install`        | Skip `npm install`                                          |
+| `--dry-run`           | Print what would change, don't touch files                  |
+| `--yes`               | Skip the confirmation prompt                                |
+| `--help`              | Show help                                                   |
+
+## Manual setup
+
+If you prefer to do it yourself:
+
+```bash
 cd react-vite-boilerplate
-
-# 2. Install dependencies
 npm install
-
-# 3. Create your env file from the template
 cp .env.example .env
-# Point VITE_API_URL to your real backend when you have one
+# Point VITE_API_URL at your real backend
 ```
 
 ## Scripts
 
 | Command                    | Description                                                    |
 | -------------------------- | -------------------------------------------------------------- |
+| `npm run setup`            | Interactive boilerplate setup (rename + env + install)         |
+| `npm run rename`           | Rename the project only (no install, no git reset)             |
 | `npm run dev`              | Start dev server at `http://localhost:5173` with HMR           |
 | `npm run build`            | Type-check + production build (output to `dist/`)              |
 | `npm run preview`          | Preview the production build at `http://localhost:4173`        |
@@ -258,6 +302,33 @@ import { useAuth } from '@/features/auth/hooks/useAuth'
 Only mounted in dev (`import.meta.env.DEV`):
 - **TanStack Router Devtools** — "TanStack Router" pill in the bottom-left.
 - **TanStack Query Devtools** — logo icon in the bottom-right.
+
+## Theming
+
+One **source of truth** in `src/shared/lib/designTokens.ts` (colors, radius, font, spacing, breakpoints, control height). Both Tailwind and Ant Design consume these tokens so utilities like `bg-primary` / `rounded-md` line up with `<Button/>` / `<Card/>` visually.
+
+```
+src/shared/lib/designTokens.ts          # colors, radius, fontFamily, ... (source of truth)
+     │
+     ├──► tailwind.config.ts            # extend Tailwind theme (bg-primary, rounded-md, ...)
+     │       │
+     │       └──► src/index.css         # @config '../tailwind.config.ts'
+     │
+     └──► src/shared/lib/theme.ts       # AntD ConfigProvider (token + component overrides)
+             │
+             └──► src/app/providers/ThemeProvider.tsx
+                     │
+                     └──► <ConfigProvider theme={lightTheme | darkTheme}>
+```
+
+**Adding a new token:**
+1. Add it to `src/shared/lib/designTokens.ts`.
+2. Reference it in `tailwind.config.ts` (for Tailwind utilities).
+3. Reference it in `src/shared/lib/theme.ts` (for AntD components).
+
+**Ant Design component overrides** live in `sharedComponents` inside `src/shared/lib/theme.ts` (Button, Input, Card, Menu, Table, Layout, Form, ...). Prefer overriding here rather than writing global CSS.
+
+**Tailwind preflight is skipped** (via modular imports in `src/index.css`) to avoid conflicts with Ant Design's internal reset. If you need extra base styles, add them to `src/index.css`.
 
 ## React Compiler
 
