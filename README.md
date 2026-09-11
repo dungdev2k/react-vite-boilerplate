@@ -17,6 +17,7 @@ Enterprise-grade boilerplate for React + TypeScript applications. **Feature-base
 | HTTP          | Axios (instance + interceptors)                         |
 | Lint          | ESLint 10 flat config + typescript-eslint + react-hooks |
 | Storybook     | Storybook 10 + @storybook/react-vite + addon-a11y/themes |
+| Compiler      | React Compiler (via `@vitejs/plugin-react` + `oxc-transform-react`) |
 
 ## Prerequisites
 
@@ -257,6 +258,15 @@ import { useAuth } from '@/features/auth/hooks/useAuth'
 Only mounted in dev (`import.meta.env.DEV`):
 - **TanStack Router Devtools** — "TanStack Router" pill in the bottom-left.
 - **TanStack Query Devtools** — logo icon in the bottom-right.
+
+## React Compiler
+
+Enabled in `vite.config.ts` via `react({ compiler: true })`. It automatically memoises components and values at build time so you rarely need `useMemo` / `useCallback` / `React.memo` by hand.
+
+- Runtime: `babel-plugin-react-compiler` (invoked through `oxc-transform-react`).
+- Lint: `eslint-plugin-react-hooks@^7` bundles the `react-hooks/react-compiler` rule and enforces the Rules of React.
+- Applies to both `npm run build` and Storybook (same Vite config).
+- Prefer plain code over manual memoisation — the compiler handles the common cases. Only fall back to `useMemo`/`useCallback` when profiling shows you need to.
 
 ## Storybook
 

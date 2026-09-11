@@ -187,6 +187,13 @@ export function LoginForm({ onSuccess }: Props) {
 - `Props` is a **local type**, not exported unless there is a real reuse case.
 - Optional callbacks: `onXxx?: () => void`. Do not default them to `() => {}`.
 
+### 7.5 Memoisation (React Compiler)
+React Compiler is enabled — it auto-memoises components, values, and callbacks at build time.
+
+- **Do not** wrap things in `useMemo` / `useCallback` / `React.memo` by default. Write plain code.
+- Only add manual memoisation when profiling proves it's needed AND the compiler skipped it (check with `eslint-plugin-react-hooks` — it warns if a component isn't memoisable).
+- Follow the Rules of React strictly (no mutation of props/state, no side effects in render). The ESLint rule `react-hooks/react-compiler` enforces this.
+
 ---
 
 ## 8. Routing (TanStack Router)
