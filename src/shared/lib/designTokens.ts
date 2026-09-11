@@ -59,6 +59,14 @@ export const fontSize = {
   '4xl': 36,
 } as const
 
+/**
+ * Semantic spacing scale — consumed by Ant Design component overrides only.
+ * NOT wired into Tailwind's `spacing` because Tailwind v4 derives
+ * `max-w-*` / `w-*` / `h-*` from spacing, and semantic keys (`sm/md/lg`)
+ * would shadow the default `max-w-sm` (24rem) / `w-md` scale.
+ *
+ * In JSX use Tailwind's default numeric scale instead: `p-4`, `gap-6`, ...
+ */
 export const spacing = {
   xs: 4,
   sm: 8,

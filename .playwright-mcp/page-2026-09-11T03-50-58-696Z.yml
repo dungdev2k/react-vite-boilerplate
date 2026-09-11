@@ -1,0 +1,42 @@
+- generic [ref=f4e3]:
+  - generic [ref=f4e47]:
+    - complementary [ref=f4e48]:
+      - generic [ref=f4e49]:
+        - generic [ref=f4e50]: React Boilerplate
+        - menu [ref=f4e52]:
+          - menuitem [ref=f4e53] [cursor=pointer]:
+            - img "dashboard" [ref=f4e54]
+            - link "Dashboard" [ref=f4e58]:
+              - /url: /
+          - menuitem [ref=f4e59] [cursor=pointer]:
+            - img "team" [ref=f4e60]
+            - link "Users" [ref=f4e64]:
+              - /url: /users
+          - menuitem [ref=f4e65] [cursor=pointer]:
+            - img "setting" [ref=f4e66]
+            - link "Settings" [ref=f4e70]:
+              - /url: /settings
+      - img "left" [ref=f4e72] [cursor=pointer]
+    - generic [ref=f4e75]:
+      - banner [ref=f4e76]:
+        - generic [ref=f4e77]:
+          - button "Language" [ref=f4e79] [cursor=pointer]:
+            - img "global" [ref=f4e81]
+          - button "Toggle theme" [ref=f4e85] [cursor=pointer]:
+            - img "moon" [ref=f4e87]
+          - button "user will" [ref=f4e91] [cursor=pointer]:
+            - img "user" [ref=f4e93]
+            - generic [ref=f4e96]: will
+      - main [ref=f4e97]:
+        - generic [ref=f4e99]:
+          - generic [ref=f4e100]: Dashboard
+          - generic [ref=f4e104]:
+            - text: Welcome,
+            - strong [ref=f4e105]: will
+            - text: .
+  - generic:
+    - contentinfo:
+      - button "Open TanStack Router Devtools" [ref=f4e106] [cursor=pointer]:
+        - generic [ref=f4e178]: "-"
+        - generic [ref=f4e179]: TanStack Router
+  - button "Open Tanstack query devtools" [ref=f4e230] [cursor=pointer]

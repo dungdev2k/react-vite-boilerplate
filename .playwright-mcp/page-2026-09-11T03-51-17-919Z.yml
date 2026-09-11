@@ -1,0 +1,55 @@
+- generic [ref=f5e4]:
+  - complementary [ref=f5e5]:
+    - generic [ref=f5e6]:
+      - generic [ref=f5e7]: React Boilerplate
+      - menu [ref=f5e9]:
+        - menuitem [ref=f5e10] [cursor=pointer]:
+          - img "dashboard" [ref=f5e11]
+          - link "Dashboard" [ref=f5e15]:
+            - /url: /
+        - menuitem [ref=f5e16] [cursor=pointer]:
+          - img "team" [ref=f5e17]
+          - link "Users" [ref=f5e21]:
+            - /url: /users
+        - menuitem [ref=f5e22] [cursor=pointer]:
+          - img "setting" [ref=f5e23]
+          - link "Settings" [ref=f5e27]:
+            - /url: /settings
+    - img "left" [ref=f5e29] [cursor=pointer]
+  - generic [ref=f5e32]:
+    - banner [ref=f5e33]:
+      - generic [ref=f5e34]:
+        - button "Language" [ref=f5e36] [cursor=pointer]:
+          - img "global" [ref=f5e38]
+        - button "Toggle theme" [ref=f5e42] [cursor=pointer]:
+          - img "moon" [ref=f5e44]
+        - button "user will" [ref=f5e48] [cursor=pointer]:
+          - img "user" [ref=f5e50]
+          - generic [ref=f5e53]: will
+    - main [ref=f5e54]:
+      - generic [ref=f5e55]:
+        - generic [ref=f5e57]:
+          - heading "Users" [level=4] [ref=f5e59]
+          - button "plus Create" [ref=f5e61] [cursor=pointer]:
+            - img "plus" [ref=f5e63]
+            - generic [ref=f5e67]: Create
+        - generic [ref=f5e70]:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - table:
+                    - rowgroup:
+                      - row "ID Name Email Phone Company":
+                        - columnheader "ID"
+                        - columnheader "Name"
+                        - columnheader "Email"
+                        - columnheader "Phone"
+                        - columnheader "Company"
+                    - rowgroup:
+                      - row "No data No data":
+                        - cell "No data No data":
+                          - generic:
+                            - generic:
+                              - img "No data"
+                            - generic: No data

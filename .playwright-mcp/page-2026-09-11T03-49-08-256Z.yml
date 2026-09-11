@@ -1,0 +1,27 @@
+- generic [ref=f2e3]:
+  - generic [ref=f2e4]:
+    - generic [ref=f2e5]:
+      - button "Language" [ref=f2e6] [cursor=pointer]:
+        - img "global" [ref=f2e8]
+      - button "Toggle theme" [ref=f2e11] [cursor=pointer]:
+        - img "sun" [ref=f2e13]
+    - generic [ref=f2e17]:
+      - generic:
+        - heading "Sign in" [level=3]
+        - generic: Welcome back. Please enter your details.
+        - generic:
+          - generic:
+            - generic:
+              - generic "Email"
+            - textbox "you@example.com" [ref=f2e18]
+        - generic:
+          - generic:
+            - generic:
+              - generic "Password"
+            - generic [ref=f2e19]:
+              - textbox "••••••"
+              - button "Show" [ref=f2e21] [cursor=pointer]:
+                - img "eye-invisible" [ref=f2e22]
+        - button "Sign in" [ref=f2e26] [cursor=pointer]
+        - generic: "Demo: enter any email and password with 6+ characters."
+  - button "Open Tanstack query devtools" [ref=f2e78] [cursor=pointer]

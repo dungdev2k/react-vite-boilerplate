@@ -1,0 +1,35 @@
+- generic [ref=e4]:
+  - complementary [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e7]: Flow Manager
+      - menu [ref=e9]:
+        - menuitem [ref=e10] [cursor=pointer]:
+          - img "dashboard" [ref=e11]
+          - link "Dashboard" [ref=e15]:
+            - /url: /
+        - menuitem [ref=e16] [cursor=pointer]:
+          - img "team" [ref=e17]
+          - link "Users" [ref=e21]:
+            - /url: /users
+        - menuitem [ref=e22] [cursor=pointer]:
+          - img "setting" [ref=e23]
+          - link "Settings" [ref=e27]:
+            - /url: /settings
+    - img "left" [ref=e29] [cursor=pointer]
+  - generic [ref=e32]:
+    - banner [ref=e33]:
+      - generic [ref=e34]:
+        - button "Language" [ref=e36] [cursor=pointer]:
+          - img "global" [ref=e38]
+        - button "Toggle theme" [ref=e42] [cursor=pointer]:
+          - img "sun" [ref=e44]
+        - button "user will" [ref=e48] [cursor=pointer]:
+          - img "user" [ref=e50]
+          - generic [ref=e53]: will
+    - main [ref=e54]:
+      - generic [ref=e56]:
+        - generic [ref=e57]: Dashboard
+        - generic [ref=e61]:
+          - text: Welcome,
+          - strong [ref=e62]: will
+          - text: .

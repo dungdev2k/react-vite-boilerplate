@@ -1,0 +1,25 @@
+- generic [ref=f1e4]:
+  - generic [ref=f1e5]:
+    - button "Language" [ref=f1e6] [cursor=pointer]:
+      - img "global" [ref=f1e8]
+    - button "Toggle theme" [ref=f1e11] [cursor=pointer]:
+      - img "sun" [ref=f1e13]
+  - generic [ref=f1e17]:
+    - generic:
+      - heading "Sign in" [level=3]
+      - generic: Welcome back. Please enter your details.
+      - generic:
+        - generic:
+          - generic:
+            - generic "Email"
+          - textbox "you@example.com" [ref=f1e18]
+      - generic:
+        - generic:
+          - generic:
+            - generic "Password"
+          - generic [ref=f1e19]:
+            - textbox "••••••"
+            - button "Show" [ref=f1e21] [cursor=pointer]:
+              - img "eye-invisible" [ref=f1e22]
+      - button "Sign in" [ref=f1e26] [cursor=pointer]
+      - generic: "Demo: enter any email and password with 6+ characters."
